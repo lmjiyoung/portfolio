@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>res</title>
+<link rel="stylesheet" media="all" type="text/css"  href="style/reset.css"/>
+<link rel="stylesheet" media="all" type="text/css"  href="style/sub_common.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<style>
+@media(min-width:1024px){
+	#menu{display:none;}
+	#lnb li{float:left;}
+	#lnb {float:right; margin-top:3%;}
+	.header ul li a{ font-family:Verdana, Geneva, sans-serif; padding-right:16px; margin-left:16px;  color:#333;font-size:1.5em; display:inline-block;}
+	.header ul li a:hover{ background:url(images/ico_menu.png) right center no-repeat;}
+	.header ul li a.select{ background:url(images/ico_menu.png) right center no-repeat;}	
+}
+@media(min-width:720px) and (max-width:1023px){
+	 #lnb{display:none;}
+}
+ @media(max-width:719px){
+	 #lnb{display:none;}
+}
+</style>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function(e){
+	//메인메뉴를클릭햇을때 서브내려욤.
+	$('#menu>li> a').click(function(){
+		
+		//만약 마우스로 클릭한 메뉴가 활성화가 되어있지 않았던 메뉴라면(active클래스가 없다면)
+		// != : 같지 않다 == 같다
+		if($(this).attr('class') != 'active'){ //if(조건문) 조건문이 맞으면 아래 이벤트 실행하고, 맞지 않으면 else이벤트를 실행함.
+		
+		//모든 메인메뉴의 모든 서브를 슬라이드업(안보이게)해라.
+			$('#menu li ul').slideUp();
+			
+			//현재 활성화된(클릭한)메뉴에 active클래스를 추가하고, 다음하위객체를 슬라이드다운해라.(next() == #menu >li >a >다음객체)
+			$(this).addClass('active').next().stop().slideDown();
+			
+			//모든 메인메뉴의 active 클래스 제거  <-클릭한후 활성화 색상그대로유지되는것 클래스명지우기.
+			$('#menu>li>a').removeClass('active');
+			
+			//현재 활성회된(클리한)메뉴에만 active클래스를 추가 <-클릭한후 활성화 색상그대로유지되는것 클래스명지우기.
+			$(this).addClass('active')
+			
+		//마우스로 클릭한 메뉴가 이미 활성화 되어있던것이라면(active클래스가 있다면)
+		}else{
+			$('#menu > li > a').removeClass('active');
+			$(this).next().stop().slideUp();
+		}
+		
+	});
+});
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+	<div class="header"> <!--header-->
+    	<div class="inner">
+        	<h1><img src="images/logo.png" /></h1>
+            
+    	 	<ul id="lnb"> <!--web menu-->
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">COFFEE</a></li>
+                <li><a href="#">ROASTERS</a></li>
+                <li><a href="#">BAKERY</a></li>
+                <li><a href="#">ACADEMY</a></li>
+                <li><a href="#">SHOP</a></li>
+           </ul>
+           
+           <ul id="menu"><!--mobile menu-->
+            	<li><a href="#"><img src="images/menu.png" /></a>
+                    <ul>
+                       <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">COFFEE</a></li>
+                        <li><a href="#">ROASTERS</a></li>
+                        <li><a href="#">BAKERY</a></li>
+                        <li><a href="#">ACADEMY</a></li>
+                        <li><a href="#">SHOP</a></li>
+                    </ul>
+                </li>
+        	</ul>
+       </div>
+   </div><!-- // header-->
+   <div class="content">
+   		<div class="inner">
+        d
+        </div>
+   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap{margin:0; padding:0;}
+/*header*/
+.header{width:1000px; margin:0 auto; height:100px;}
+.header ul{float:right; margin-top:42px;}
+.header ul li{float:left; font-size:17px; color:#282828; margin-left:20px;}
+.header ul li a{ font-family:Verdana, Geneva, sans-serif; padding-right:16px;}
+.header ul li a:hover{ background:url(../images/ico_menu.png) right center no-repeat;}
+.header ul li a.select{ background:url(../images/ico_menu.png) right center no-repeat;}
+
+/*about*/
+.about_img{height:500px; width:100%; position:relative; display:block; text-align:center; padding-top:50px; margin-top:-3px;background: url(../images/about.jpg) 50% 100% repeat fixed; background-size: cover;}
+.about_title{font-size:40px; color:#fff; margin-top:200px; }
+.about{text-align:center; margin-top:100px; overflow:hidden;}
+.about p{font-size:15px; margin-top:30px; color:#525252; }
+
+/*location*/
+.location_img{height:600px; width:100%; position:relative; display:block; overflow:hidden; text-align:center; margin-top:100px; background: url(../images/location.jpg) 50% 10% repeat fixed; background-size: cover;}
+.location{text-align:center;}
+.location p{margin-bottom:10px; font-size:15px; color:#282828; margin-top:10px;}
+.location p span{ margin-left:10px; color:#545353;}
+.location p span img{margin-right:10px;}
+
+
+/*footer*/
+.footer{ background:#f6f6f6; display:block; overflow:hidden; padding-top:30px; padding-bottom:30px; margin-top:60px;}
+.contact{float:left; color:#999;}
+.contact_title{font-size:15px; font-weight:600; margin-bottom:10px; color:#666;}
+.section>h1{float:right; margin-top:50px;}
+.sns{margin-top:10px; margin-bottom:10px;}
+.sns a{margin-right:7px;}
+
+
+/*common*/
+h1{float:left; margin-top:23px;}
+h2{font-size:26px; color:#282828; margin-top:100px;text-align:center;margin-bottom:60px;}
+h3{font-size:36px; margin-bottom:30px; color:#3a3a3a; font-weight:normal; }
+.section{width:1000px; margin:0 auto;}
